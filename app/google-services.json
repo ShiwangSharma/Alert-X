@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "795131527027",
+    "project_id": "alert-x-4f867",
+    "storage_bucket": "alert-x-4f867.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:795131527027:android:2285c9776481d9b83a0f06",
+        "android_client_info": {
+          "package_name": "com.shiwangapp.homepagesih"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfL8nMdbOYmYmIJuj2j5K2-fm1Xkf4yzg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

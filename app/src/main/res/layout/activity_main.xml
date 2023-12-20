@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/current_location"
+                    android:drawableStart="@drawable/location_img"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:hint="finding current location"
+                    android:drawableLeft="@drawable/location_img" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    app:cardCornerRadius="20dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/hurricane"
+                        android:scaleType="centerCrop"/>
+
+
+                    <LinearLayout
+                        android:padding="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:id="@+id/tvTemp"
+                                android:textSize="30sp"
+                                android:textColor="@color/white" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="20dp"
+                                android:orientation="vertical">
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/white"
+                                        android:layout_height="wrap_content"
+                                        android:text="Pressure"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=""
+                                        android:id="@+id/tvPressure"
+                                        android:textColor="@color/white"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_alignParentRight="true" />
+                                </RelativeLayout>
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/white"
+                                        android:text="Wind Speed"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=""
+                                        android:id="@+id/tvWind"
+                                        android:textColor="@color/white"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_alignParentRight="true" />
+                                </RelativeLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="end"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Danger"
+                                android:visibility="invisible"
+                                android:textColor="#F41D1D"
+                                android:textSize="30sp"/>
+                            <com.google.android.material.button.MaterialButton
+                                android:layout_marginTop="30dp"
+                                android:id="@+id/locate"
+                                android:background="@drawable/btn_back"
+                                android:padding="10dp"
+                                app:backgroundTint="@android:color/holo_blue_bright"
+                                android:textStyle="bold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                android:text="Locate Shelter"/>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Quick Actions"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:weightSum="3"
+                    android:paddingHorizontal="20dp"
+                    android:background="@drawable/ll_shape"
+                    android:backgroundTint="@android:color/holo_blue_bright"
+                    android:orientation="horizontal">
+
+<!--                    <androidx.cardview.widget.CardView-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:clickable="true"-->
+<!--                        android:id="@+id/notify_card"-->
+<!--                        app:cardBackgroundColor="@android:color/holo_blue_bright">-->
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:gravity="center"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:orientation="vertical">-->
+<!--                            <ImageView-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                app:tint="@color/white"-->
+<!--                                android:src="@drawable/notify_contact"/>-->
+<!--                            <TextView-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:text="Notify Contacts"-->
+<!--                                android:textColor="@color/white"-->
+<!--                                android:textStyle="bold"-->
+<!--                                android:textSize="10sp"/>-->
+<!--                        </LinearLayout>-->
+<!--                    </androidx.cardview.widget.CardView>-->
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:id="@+id/find_shelter_card"
+                        app:cardBackgroundColor="@android:color/holo_blue_bright">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:tint="@color/white"
+                                android:src="@drawable/outline_navigation_24"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Find Shelter"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:textSize="10sp"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:id="@+id/chat_card"
+                        app:cardBackgroundColor="@android:color/holo_blue_bright">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:tint="@color/white"
+                                android:src="@drawable/ic_chat"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Chat"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:textSize="10sp"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:layout_height="match_parent"
+                        android:id="@+id/profile_card"
+                        app:cardBackgroundColor="@android:color/holo_blue_bright">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:tint="@color/white"
+                                android:src="@drawable/profile"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Profile"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:textSize="10sp"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Updates"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    android:textStyle="bold"/>
+                <com.google.android.material.progressindicator.LinearProgressIndicator
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:indeterminate="true"
+                    android:id="@+id/progress_bar"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/news_recycler"/>
+<!--                <HorizontalScrollView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content">-->
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal">-->
+<!--                        <ImageView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:src="@drawable/twit1"/>-->
+
+<!--                        <ImageView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="300dp"-->
+<!--                            android:src="@drawable/twit2" />-->
+
+<!--                        <ImageView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="300dp"-->
+<!--                            android:src="@drawable/twit3"/>-->
+<!--                        <ImageView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="300dp"-->
+<!--                            android:src="@drawable/twit4"/>-->
+<!--                    </LinearLayout>-->
+<!--                </HorizontalScrollView>-->
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomAppBar"
+        app:backgroundTint="@color/white"
+        android:layout_gravity="bottom">
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/select_item_nav"
+            android:id="@+id/bottom"
+            app:menu="@menu/bottom_nav_menu"
+
+            app:backgroundTint="@android:color/white"
+            android:layout_marginEnd="20dp"
+            app:labelVisibilityMode="labeled"
+            android:layout_marginRight="20dp" />
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fab"
+        android:src="@drawable/baseline_sos_24"
+        app:layout_anchor="@+id/bottomAppBar"
+        app:backgroundTint="@android:color/holo_red_light"
+        app:tint="@color/white"
+        app:layout_anchorGravity="center" />
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

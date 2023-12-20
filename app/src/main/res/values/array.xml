@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="type_array">
+        <item>Earthquake</item>
+        <item>Landslide</item>
+        <item>Tsunami</item>
+        <item>Fire</item>
+        <item>Flood</item>
+    </string-array>
+</resources>

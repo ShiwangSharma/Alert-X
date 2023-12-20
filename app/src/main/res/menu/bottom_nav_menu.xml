@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/bottom_home"
+        android:icon="@drawable/home"
+        android:title="Home"/>
+    <item android:id="@+id/bottom_shelter"
+        android:icon="@drawable/search"
+        android:title="Shelter"/>
+    <item android:id="@+id/bottom_placeholder"
+        android:enabled="false"
+        android:title=""/>
+    <item
+        android:id="@+id/bottom_tips"
+        android:icon="@drawable/ic_chat"
+        android:title="Chat" />
+    <item android:id="@+id/bottom_profile"
+        android:icon="@drawable/profile"
+        android:title="Profile"/>
+
+
+</menu>

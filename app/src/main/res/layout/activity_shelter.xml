@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ShelterActivity">
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:id="@+id/listView"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginBottom="@dimen/_50sdp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner1"/>
+
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner2"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginBottom="60dp"
+                android:layout_marginTop="10dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#00BCD4"
+                android:layout_marginTop="-115dp"
+                android:layout_marginLeft="30sp"
+                android:text="View List"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomAppBar"
+        app:backgroundTint="@color/white"
+        android:layout_gravity="bottom">
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bottom"
+            app:menu="@menu/bottom_nav_menu"
+            android:background="@drawable/select_item_nav"
+            app:backgroundTint="@android:color/white"
+            android:layout_marginEnd="20dp"
+            app:labelVisibilityMode="labeled"
+            android:layout_marginRight="20dp" />
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fab"
+        android:src="@drawable/baseline_sos_24"
+        app:layout_anchor="@+id/bottomAppBar"
+        app:backgroundTint="@android:color/holo_red_light"
+        app:tint="@color/white"
+        app:layout_anchorGravity="center" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
